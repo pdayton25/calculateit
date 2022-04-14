@@ -15,7 +15,7 @@ const HourlyToSalary = () => {
     }
 
     return (
-        <div>
+        <div className="calculator">
             <div className="title">Hourly to Salary Calculator</div>
             <form className="hour-salary">    
                 <label>Hourly rate:</label>

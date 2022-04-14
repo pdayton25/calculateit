@@ -7,7 +7,6 @@ const SalaryToHourly = () => {
     const [weeksPerYear, setWeeksPerYear] = useState(0);
     const [result, setResult] = useState();
     const [payPeriod, setPayPeriod] = useState(1);
-    console.log(payPeriod);
 
     
     const hourlyToSalary = (event) => {
@@ -21,10 +20,10 @@ const SalaryToHourly = () => {
             <form className="hour-salary">    
                 <label>Salary:</label>
                 <input placeholder="$" value={salary} onChange={(e) => setSalary(e.target.value)}></input>
-                <select>
-                    <option onClick={(e) => setPayPeriod(1)}>Yearly</option>
-                    <option onClick={(e) => setPayPeriod(12)}>Monthly</option>
-                    <option onClick={(e) => setPayPeriod(26)}>Bi-Weekly</option>
+                <select onChange={(e) => setPayPeriod(e.target.value)}>
+                    <option value="1">Yearly</option>
+                    <option value="12">Monthly</option>
+                    <option value="26">Bi-Weekly</option>
                 </select>
                 <label>Hours per week:</label>
                 <input placeholder="40" value={weeklyHours} onChange={(e) => setWeeklyHours(e.target.value)}></input>
